@@ -36,7 +36,7 @@ docker run --name baluff_nodered -d -v nodered_data:/home/node-red/.node-red -p 
 After starting the container you can connect to the Node-RED webinterface via `http://localhost:1880` there `localhost` is available if the container runs on your local machine.
 Otherwise you need to replace `localhost` with your server's IP address.
 
-![Node-RED start page](./screens/nodered_start.png)
+![Node-RED start page](https://raw.githubusercontent.com/Balluff/docker-nodered/master/screens/nodered_start.png)
 
 By default the editor is password protected - use the following data to open the editor:
 - Username: `balluff`
@@ -45,10 +45,10 @@ By default the editor is password protected - use the following data to open the
 On the first start the Node-RED `projects` page welcomes you. If you want to clone a repository follow the wizard, otherwise click on `Not right now`.
 You can use the project feature later.
 
-![Node-RED project wizard](./screens/nodered_project_wizard.png)
+![Node-RED project wizard](https://raw.githubusercontent.com/Balluff/docker-nodered/master/screens/nodered_project_wizard.png)
 
 You can install new nodes and modules inside the container via the editor webinterface.
 For this click on the `3 horizontal stack bar icon` and then select `settings`. Go to the `Palette` area shows you all installed nodes in the tab.
 Click on `Install` tab to add new nodes.
 
-![Node-RED settings palette](./screens/nodered_settings_palette.png)
+![Node-RED settings palette](https://raw.githubusercontent.com/Balluff/docker-nodered/master/screens/nodered_settings_palette.png)
