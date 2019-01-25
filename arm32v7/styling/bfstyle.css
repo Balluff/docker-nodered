@@ -1,0 +1,53 @@
+/*
+  BalluffStyle-red - www.balluff.de
+ typical colors: 
+ darker blue: #074763
+ body color: #ececec
+ Balluff Red: #eb2f47
+ Borders: #C7D0D8
+ other color: #E9EDF2
+ another color: #F5F6F9
+ other color: #f7f8fa
+ letters dark: 555555
+ letters bright: 
+  */
+
+  #header {
+    background: #074763;
+    color: #b0b0b0;
+  }
+  #header .button {
+    border-left: 2px solid #074763;
+    border-right: 2px solid #074763
+  }
+  #header .button:hover {
+    border-color:  #06394e
+  }
+  .deploy-button {
+    background: #8C101C;
+    color: #eee !important
+  }
+  .deploy-button:hover {
+    background: #eb2f48
+  }
+  .deploy-button:active {
+    background: #4C0A17;
+    color: #ccc !important
+  }
+  #btn-deploy.disabled {
+    background: #555555;
+    color: #999 !important
+  }
+  #btn-deploy.disabled + #btn-deploy-options {
+    background: #555555;
+    color: #ddd
+  }
+  #btn-deploy.disabled + #btn-deploy-options:hover {
+    background: #555
+  }
+  #btn-deploy.disabled + #btn-deploy-options:active {
+    background: #444
+  }
+  .palette-header {
+    background: #ECECEC
+  }
