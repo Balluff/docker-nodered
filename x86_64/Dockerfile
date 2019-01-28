@@ -14,7 +14,7 @@ RUN apk update && apk upgrade
 RUN apk add git openssl make gcc g++ python
 
 # Install Node-RED described in the official documentation
-RUN npm install -g --unsafe-perm node-red@latest node-red-admin@latest bcryptjs@latest
+RUN npm install -g --unsafe-perm node-red@latest node-red-admin@latest
 
 # Create a new user and create the default Node-RED directory. Change the users owner rights.
 RUN adduser --disabled-password --gecos '' node-red \
