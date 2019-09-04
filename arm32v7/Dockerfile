@@ -13,13 +13,6 @@ RUN apk update && apk upgrade
 # Install some necessary tools because some nodes needs to be rebuild
 RUN apk add git openssl make gcc g++ python
 
-# This section is necessary for import company CA certificates
-ARG certfile=./certs/
-
-# USER root
-
-# RUN apk --no-cache add ca-certificates
-
 # Copy the certification files
 COPY certs/ /usr/local/share/ca-certificates/
 
