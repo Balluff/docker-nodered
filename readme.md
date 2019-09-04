@@ -15,7 +15,7 @@ Also [git](https://git-scm.com/) is installed and the Node-RED project feature i
 Start this container by the following command will pull and run it in the background.
 
 ```sh
-docker run --name baluff_nodered -d -p 1880:1880 balluff/nodered:v1.0
+docker run --name baluff_nodered -d -p 1880:1880 balluff/nodered:1.2
 ```
 
 If you don't enter an tag `latest` is used. But we recommend to set a tag and pull the specific version you want.
@@ -24,11 +24,11 @@ Use a volume mount binding with parameter `-v` to have the data created inside t
 
 ```sh
 # Mount binding to a local directory
-docker run --name baluff_nodered -d -v /path/to/map:/home/node-red/.node-red -p 1880:1880 balluff/nodered:v1.0
+docker run --name baluff_nodered -d -v /path/to/map:/home/node-red/.node-red -p 1880:1880 balluff/nodered:1.2
 
 # Work with a volume
 docker volume create nodered_data
-docker run --name baluff_nodered -d -v nodered_data:/home/node-red/.node-red -p 1880:1880 balluff/nodered:v1.0
+docker run --name baluff_nodered -d -v nodered_data:/home/node-red/.node-red -p 1880:1880 balluff/nodered:1.2
 ```
 
 ## Work with Node-RED
@@ -39,6 +39,7 @@ Otherwise you need to replace `localhost` with your server's IP address.
 ![Node-RED start page](https://raw.githubusercontent.com/Balluff/docker-nodered/master/screens/nodered_start.png)
 
 By default the editor is password protected - use the following data to open the editor:
+
 - Username: `balluff`
 - Password: `VuUg3vcz`
 
@@ -52,3 +53,19 @@ For this click on the `3 horizontal stack bar icon` and then select `settings`. 
 Click on `Install` tab to add new nodes.
 
 ![Node-RED settings palette](https://raw.githubusercontent.com/Balluff/docker-nodered/master/screens/nodered_settings_palette.png)
+
+## Rebuild container image
+
+In case you want to rebuild the container image, you have to create the directory `certs` inside `x86_64` or `arm32v7` and copy the company `*.crt` files inside this directory. After that you can rebuild the container image for you own because the companies network needs some SSL certificatites to use HTTPS correctly behind the firewall.
+
+```sh
+# Create directory
+$ cd x86_64/
+$ mkdir certs
+
+# Copy crt files
+$ cp {CRT_SOURCE} $PWD/certs
+
+# Run the docker build command
+$ docker build -t balluff/nodered:{VERSION} .
+```
