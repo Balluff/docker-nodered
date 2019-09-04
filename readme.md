@@ -56,13 +56,9 @@ Click on `Install` tab to add new nodes.
 
 ## Rebuild container image
 
-In case you want to rebuild the container image, you have to create the directory `certs` inside `x86_64` or `arm32v7` and copy the company `*.crt` files inside this directory. After that you can rebuild the container image for you own because the companies network needs some SSL certificatites to use HTTPS correctly behind the firewall.
+In case you want to rebuild the container image, you have to replace the files inside `certs` directory for each architecture `x86_64` or `arm32v7` and copy your company `*.crt` files to the `certs` directory. After that you can rebuild the container image for you own because the companies network needs some SSL certificates to use HTTPS correctly behind the firewall.
 
 ```sh
-# Create directory
-$ cd x86_64/
-$ mkdir certs
-
 # Copy crt files
 $ cp {CRT_SOURCE} $PWD/certs
 
