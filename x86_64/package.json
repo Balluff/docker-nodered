@@ -6,7 +6,6 @@
   "dependencies": {
     "mailparser":"^2.4.3",
     "nodemailer":"^4.7.0",
-    "bcryptjs":"^2.4.3",
     "needle": "^2.2.4",
     "uuid":"^3.3.2",
     "cryptiles":"^4.1.3",
